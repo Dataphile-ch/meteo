@@ -1,0 +1,11 @@
+[Unit]
+Description=Documment Server
+
+[Service]
+ExecStart=/home/william/docservice.sh
+User=william
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+

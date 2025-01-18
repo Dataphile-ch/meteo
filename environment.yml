@@ -1,0 +1,16 @@
+name: meteo
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - pandas
+  - requests
+  - boto3
+  - matplotlib
+  - pytz
+  - scikit-learn==1.6.0
+  - fastapi[standard]
+  - spyder
+  - spyder-kernels
+  - ipython
+  - gh

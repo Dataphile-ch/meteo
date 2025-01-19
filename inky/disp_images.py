@@ -16,7 +16,10 @@ from picographics import PicoGraphics, DISPLAY_INKY_FRAME as DISPLAY
 from jpegdec import JPEG
 
 
-def display_weather() :
+def display_image(fname) :
+    
+    fpath = f"/sd/images/{fname}"
+    
     # mount SD card
     try:
         os.stat("/sd")
@@ -33,7 +36,7 @@ def display_weather() :
     j = JPEG(graphics)
     
     try :
-        j.open_file("/sd/images/weekly.jpg")
+        j.open_file(fpath)
         j.decode()
         gc.collect()
     except :

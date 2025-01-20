@@ -54,5 +54,5 @@ with open(log_fname, 'a') as f :
     f.close()  
 
 # this will overwrite (create new version) if it already exists
-#utils.s3_upload(log_fname)
+utils.s3_upload(log_fname)
      

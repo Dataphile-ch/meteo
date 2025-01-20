@@ -14,3 +14,4 @@ dependencies:
   - spyder-kernels
   - ipython
   - gh
+  - gitk

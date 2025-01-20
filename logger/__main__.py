@@ -13,7 +13,9 @@ designed to run in a cron job every hour.
 import resources.utils as utils
 import datetime as dt
 
-coord = utils.coordinates_ovz
+LOCATION = 'ovz'
+loc_name = utils.locations[LOCATION]['name']
+coord = utils.locations[LOCATION]['coords']
 
 outside = '037D79D802E0'
 upstairs = '12432F33E468'
@@ -52,5 +54,5 @@ with open(log_fname, 'a') as f :
     f.close()  
 
 # this will overwrite (create new version) if it already exists
-utils.s3_upload(log_fname)
+#utils.s3_upload(log_fname)
      

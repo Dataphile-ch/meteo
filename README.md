@@ -35,14 +35,17 @@ python -m venv .venv
 
 source .venv/bin/activate
 
-## Composer
+## Composer and Logger
 copy bash script to user home:
 
 cp meteo/composer/meteo_composer.sh ~
 
+cp meteo/logger/meteo_logger.sh ~
+
 put this entry in crontab (crontab -e) :
 
-0 * * * * ./meteo_composer.sh
+`0 * * * * ./meteo_composer.sh`
+`5 * * * * ./meteo_composer.sh`
 
 ## API
 Copy docservice.sh to user home ~

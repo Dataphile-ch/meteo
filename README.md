@@ -33,6 +33,8 @@ git merge
 
 python -m venv .venv
 
+pip install -r requirements.txt
+
 source .venv/bin/activate
 
 ## Composer and Logger
@@ -44,8 +46,9 @@ cp meteo/logger/meteo_logger.sh ~
 
 put this entry in crontab (crontab -e) :
 
-`0 * * * * ./meteo_composer.sh`
-`5 * * * * ./meteo_composer.sh`
+0 * * * * ./meteo_composer.sh
+
+5 * * * * ./meteo_logger.sh
 
 ## API
 Copy docservice.sh to user home ~
